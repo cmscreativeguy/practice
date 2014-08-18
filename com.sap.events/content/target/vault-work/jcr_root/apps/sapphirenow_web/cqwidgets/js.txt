@@ -1,6 +1,0 @@
-#base=js
-HeaderCustomMultiField.js
-HeaderPageTabs.js
-TopCustomMultiField.js
-Dialog.js
-HeaderMultiField.js

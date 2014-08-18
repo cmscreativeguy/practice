@@ -1,7 +1,0 @@
-com/sap/events/utils/TestServlet.class
-com/sap/events/utils/ChangeNodesServlet.class
-com/sap/events/utils/sitecreation/SiteCreationService.class
-com/sap/events/utils/AbstractServlet.class
-com/sap/events/utils/sitecreation/SiteCreationServlet.class
-com/sap/events/utils/sitecreation/Publisher.class
-com/sap/events/utils/sitecreation/impl/SiteCreationServiceImpl.class

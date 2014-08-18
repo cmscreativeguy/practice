@@ -1,8 +1,0 @@
-com/sap/events/core/cq/module/OsgiModule.class
-com/sap/events/core/cq/module/SAPModulesFactory.class
-com/sap/events/core/email/Mailer.class
-com/sap/events/core/json/SiteCreationJSON.class
-com/sap/events/core/bundle/Activator.class
-com/sap/events/core/email/impl/ExceptionMailerImpl.class
-com/sap/events/core/cq/module/OsgiServiceProvider.class
-com/sap/events/core/json/TopNavigationHeader.class

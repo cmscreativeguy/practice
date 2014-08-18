@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<workspaceFilter version="1.0">
-	<filter root="/apps/events" mode="replace" />
-	<filter root="/apps/events/install" mode="replace" />
-	<filter root="/apps/sapphirenow_web/cqwidgets" mode="replace" />	
-	<filter root="/etc/designs/events" mode="replace" />
-	<filter root="/etc/events" mode="replace" />	
-</workspaceFilter>
-
