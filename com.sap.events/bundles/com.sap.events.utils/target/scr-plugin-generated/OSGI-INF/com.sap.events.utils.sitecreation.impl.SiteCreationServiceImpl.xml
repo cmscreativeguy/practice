@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="com.sap.events.utils.sitecreation.impl.SiteCreationServiceImpl" activate="activate" deactivate="deactivate">
+        <implementation class="com.sap.events.utils.sitecreation.impl.SiteCreationServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.sap.events.utils.sitecreation.SiteCreationService"/>
+        </service>
+        <property name="service.vendor" value="Ashok Pelluru"/>
+        <property name="service.pid" value="com.sap.events.utils.sitecreation.impl.SiteCreationServiceImpl"/>
+        <reference name="resolverFactory" interface="org.apache.sling.jcr.resource.JcrResourceResolverFactory" cardinality="1..1" policy="static" bind="bindResolverFactory" unbind="unbindResolverFactory"/>
+        <reference name="repository" interface="org.apache.sling.jcr.api.SlingRepository" cardinality="1..1" policy="static" bind="bindRepository" unbind="unbindRepository"/>
+    </scr:component>
+</components>

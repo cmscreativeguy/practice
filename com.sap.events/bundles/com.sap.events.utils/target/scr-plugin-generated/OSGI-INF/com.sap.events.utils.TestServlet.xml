@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component name="com.sap.events.utils.TestServlet">
+        <implementation class="com.sap.events.utils.TestServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="sling.servlet.paths">
+            /bin/test
+        </property>
+        <property name="service.description" value="SAP Virtual Events Testing Servlet"/>
+        <property name="service.vendor" value="Ashok Pelluru"/>
+        <property name="service.pid" value="com.sap.events.utils.TestServlet"/>
+    </scr:component>
+</components>

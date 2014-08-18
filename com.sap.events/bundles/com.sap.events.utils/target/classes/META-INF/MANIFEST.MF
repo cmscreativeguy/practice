@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1408383693265
+Build-Jdk: 1.7.0_67
+Built-By: ashokpelluru
+Bundle-ManifestVersion: 2
+Bundle-Name: SAP Extra Utils: Utils Bundle
+Bundle-SymbolicName: com.sap.extrautils.com.sap.events.utils
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.sap.events.utils;uses:="org.apache.sling.api.servlet
+ s,javax.servlet,com.fasterxml.jackson.databind,org.apache.sling.api,com
+ .sap.events.jersy.services.jersey,com.sap.events.core.json,javax.jcr,or
+ g.apache.sling.jcr.api,org.slf4j";version="1.0.0.SNAPSHOT",com.sap.even
+ ts.utils.sitecreation;uses:="org.apache.sling.api.servlets,javax.jcr,co
+ m.sap.events.core.json,javax.servlet,com.fasterxml.jackson.databind,com
+ .day.cq.commons.servlets,com.sap.events.utils,org.apache.sling.api,org.
+ slf4j,com.sap.events.jersy.services.jersey,javax.servlet.http";version=
+ "1.0.0.SNAPSHOT"
+Import-Package: com.day.cq.commons.servlets;resolution:=required,com.day
+ .cq.wcm.api;resolution:=required,com.fasterxml.jackson.databind;resolut
+ ion:=required;version="[2.1,3)",com.sap.events.core.json;resolution:=re
+ quired;version="[1.0,2)",com.sap.events.jersy.services.jersey;resolutio
+ n:=required;version="[1.0,2)",com.sap.events.utils.sitecreation;resolut
+ ion:=required,javax.jcr;resolution:=required;version="[2.0,3)",javax.se
+ rvlet;resolution:=required,javax.servlet.http;resolution:=required,org.
+ apache.sling.api;resolution:=required;version="[2.2,3)",org.apache.slin
+ g.api.resource;resolution:=required;version="[2.1,3)",org.apache.sling.
+ api.servlets;resolution:=required;version="[2.1,3)",org.apache.sling.jc
+ r.api;resolution:=required;version="[2.1,3)",org.apache.sling.jcr.resou
+ rce;resolution:=required;version="[2.0,3)",org.slf4j;resolution:=requir
+ ed;version="[1.6,2)"
+Service-Component: OSGI-INF/com.sap.events.utils.sitecreation.impl.SiteC
+ reationServiceImpl.xml,OSGI-INF/com.sap.events.utils.TestServlet.xml,OS
+ GI-INF/com.sap.events.utils.ChangeNodesServlet.xml,OSGI-INF/com.sap.eve
+ nts.utils.sitecreation.SiteCreationServlet.xml
+Tool: Bnd-1.50.0

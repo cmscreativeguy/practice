@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1397678056704
+Build-Jdk: 1.6.0_30
+Built-By: ashokpelluru
+Bundle-ManifestVersion: 2
+Bundle-Name: SAP Extra Utils: Profile OSGI Bundle
+Bundle-SymbolicName: com.sap.extrautils.com.sap.events.profile
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.sap.events.profile.servlet;uses:="org.apache.sling.a
+ pi.servlets,org.apache.sling.commons.json,org.apache.sling.api,org.slf4
+ j";version="1.0.0.SNAPSHOT"
+Import-Package: org.apache.sling.api;resolution:=required;version="[2.2,
+ 3)",org.apache.sling.api.servlets;resolution:=required;version="[2.1,3)
+ ",org.apache.sling.commons.json;resolution:=required;version="[2.0,3)",
+ org.slf4j;resolution:=required;version="[1.6,2)"
+Tool: Bnd-1.50.0

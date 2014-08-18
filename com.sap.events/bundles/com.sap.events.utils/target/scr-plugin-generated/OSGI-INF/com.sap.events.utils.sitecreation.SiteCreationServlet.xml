@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component name="com.sap.events.utils.sitecreation.SiteCreationServlet">
+        <implementation class="com.sap.events.utils.sitecreation.SiteCreationServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+            <provide interface="javax.servlet.ServletConfig"/>
+            <provide interface="java.io.Serializable"/>
+        </service>
+        <property name="sling.servlet.paths" value="/bin/siteaction"/>
+        <property name="service.description" value="Create site from .net dashboard"/>
+        <property name="service.vendor" value="Ashok Pelluru"/>
+        <property name="service.pid" value="com.sap.events.utils.sitecreation.SiteCreationServlet"/>
+        <reference name="siteService" interface="com.sap.events.utils.sitecreation.SiteCreationService" cardinality="1..1" policy="static" bind="bindSiteService" unbind="unbindSiteService"/>
+    </scr:component>
+</components>

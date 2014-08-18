@@ -1,0 +1,8 @@
+/home/ashokpelluru/Documents/Code/com.sap.events/bundles/com.sap.events.core/src/main/java/com/sap/events/core/json/TopNavigationHeader.java
+/home/ashokpelluru/Documents/Code/com.sap.events/bundles/com.sap.events.core/src/main/java/com/sap/events/core/bundle/Activator.java
+/home/ashokpelluru/Documents/Code/com.sap.events/bundles/com.sap.events.core/src/main/java/com/sap/events/core/email/impl/ExceptionMailerImpl.java
+/home/ashokpelluru/Documents/Code/com.sap.events/bundles/com.sap.events.core/src/main/java/com/sap/events/core/json/SiteCreationJSON.java
+/home/ashokpelluru/Documents/Code/com.sap.events/bundles/com.sap.events.core/src/main/java/com/sap/events/core/cq/module/OsgiModule.java
+/home/ashokpelluru/Documents/Code/com.sap.events/bundles/com.sap.events.core/src/main/java/com/sap/events/core/cq/module/OsgiServiceProvider.java
+/home/ashokpelluru/Documents/Code/com.sap.events/bundles/com.sap.events.core/src/main/java/com/sap/events/core/cq/module/SAPModulesFactory.java
+/home/ashokpelluru/Documents/Code/com.sap.events/bundles/com.sap.events.core/src/main/java/com/sap/events/core/email/Mailer.java

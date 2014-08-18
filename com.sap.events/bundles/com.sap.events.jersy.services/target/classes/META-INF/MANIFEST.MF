@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1408383683407
+Build-Jdk: 1.7.0_67
+Built-By: ashokpelluru
+Bundle-ManifestVersion: 2
+Bundle-Name: SAP Extra Utils: Jersey Client Services
+Bundle-SymbolicName: com.sap.extrautils.com.sap.events.jersey.services
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.sap.events.jersy.services.osgi;version="1.0.0.SNAPSH
+ OT",com.sap.events.jersy.services;uses:="javax.ws.rs.core,com.fasterxml
+ .jackson.core.type,com.sap.events.jersy.services.jersey,com.google.inje
+ ct,com.sap.events.jersy.services.osgi,org.apache.sling.api,javax.servle
+ t.http";version="1.0.0.SNAPSHOT",com.sap.events.jersy.services.error;us
+ es:="com.fasterxml.jackson.annotation";version="1.0.0.SNAPSHOT",com.sap
+ .events.jersy.services.jersey;uses:="com.fasterxml.jackson.databind,jav
+ ax.ws.rs,javax.ws.rs.ext,com.sap.events.jersy.services,com.sun.jersey.a
+ pi.client,com.sap.events.jersy.services.error,com.fasterxml.jackson.cor
+ e.type,org.slf4j,com.google.inject,javax.ws.rs.core,com.fasterxml.jacks
+ on.databind.type";version="1.0.0.SNAPSHOT"
+Import-Package: com.fasterxml.jackson.annotation;resolution:=required;ve
+ rsion="[2.1,3)",com.fasterxml.jackson.core.type;resolution:=required;ve
+ rsion="[2.1,3)",com.fasterxml.jackson.databind;resolution:=required;ver
+ sion="[2.1,3)",com.fasterxml.jackson.databind.type;resolution:=required
+ ;version="[2.1,3)",com.google.inject;resolution:=required;version="[1.3
+ ,2)",com.sun.jersey.api.client;resolution:=required;version="[1.17,2)",
+ javax.servlet.http;resolution:=required,javax.ws.rs;resolution:=require
+ d;version="[1.1,2)",javax.ws.rs.core;resolution:=required;version="[1.1
+ ,2)",javax.ws.rs.ext;resolution:=required;version="[1.1,2)",org.apache.
+ sling.api;resolution:=required;version="[2.2,3)",org.slf4j;resolution:=
+ required;version="[1.6,2)"
+Tool: Bnd-1.50.0

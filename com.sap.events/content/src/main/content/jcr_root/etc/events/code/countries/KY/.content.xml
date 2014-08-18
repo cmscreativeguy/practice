@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    implicit="{Boolean}true"
+    legalEntityName="SAP Puerto Rico C.A."
+    legalLink="/caribe/about/company/legal/impressum_PR.epx"
+    privacyLink="/about/company/legal/privacy.epx"
+    salutation="{Boolean}false"
+    termsText=" &lt;p> I acknowledge that I have read the SAP         &lt;a href=&quot;http://sap.com/about/company/legal/privacy.epx?sapmtn=emptypageforinlineframe&quot; id=&quot;privacy-link&quot; alt=&quot;Show&quot; class=&quot;blue&quot;>Privacy Statement &lt;span>(+)&lt;/span>&lt;/a>                  (which is based on the country/region selection above)         and consent to the processing of my personal data in         accordance with the terms of the Privacy Statement.        Based on my country/region selection above, my data will be controlled by         &lt;span>SAP Puerto Rico C.A.&lt;/span>.        &lt;br />        &lt;br />                   &lt;/p>               "
+    text="Cayman Islands"
+    value="KY"/>

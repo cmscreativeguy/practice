@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.sap.extrautils</groupId>
+	<artifactId>com.sap.extrautils</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>SAP Extra Utils</name>
+	
+	<modules>
+		<module>bundles</module>
+		<module>content</module>
+    </modules>
+
+	<properties>		
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.build.timestamp.format>yyyyMMdd-HHmmss</maven.build.timestamp.format>		
+		<timestamp>${maven.build.timestamp}</timestamp>			
+		<vendor.name>Ashok Pelluru</vendor.name>
+		<sling.host>http://localhost</sling.host>
+		<sling.port>4502</sling.port>
+		<sling.server>${sling.host}:${sling.port}</sling.server>
+		<sling.user>admin</sling.user>
+		<sling.password>admin</sling.password>
+		<sling.bundles.install.path>/apps/events/install</sling.bundles.install.path>
+		<slice.version>4.0.0</slice.version>
+		<slice.addon.version>2.0.0</slice.addon.version>			
+	</properties>
+	
+	<repositories>
+		<repository>
+			<id>Global Repository</id>
+			<name>Global</name>
+			<url>http://repo1.maven.org/maven2/</url>
+		</repository>
+		<repository>
+			<id>adobe-public-releases</id>
+			<name>Adobe Public Repository</name>
+			<url>http://repo.adobe.com/nexus/content/groups/public</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		  
+	</repositories>
+	
+	<dependencyManagement>
+		<dependencies>
+		    <!-- SAP Virtual events bundles -->
+			
+		     	<dependency>
+					<groupId>com.sap.extrautils</groupId>
+					<artifactId>com.sap.events.jersey.services</artifactId>
+					<version>${project.version}</version>
+			    </dependency>
+
+		     	<dependency>
+					<groupId>com.sap.extrautils</groupId>
+					<artifactId>com.sap.events.core</artifactId>
+					<version>${project.version}</version>
+				    </dependency>
+			   <dependency>
+					<groupId>com.sap.extrautils</groupId>
+					<artifactId>com.sap.events.components</artifactId>
+					<version>${project.version}</version>
+			    </dependency>
+			    <dependency>
+					<groupId>com.sap.extrautils</groupId>
+					<artifactId>com.sap.events.more</artifactId>
+					<version>${project.version}</version>
+			    </dependency>
+			    <dependency>
+					<groupId>com.sap.extrautils</groupId>
+					<artifactId>com.sap.events.utils</artifactId>
+					<version>${project.version}</version>
+			    </dependency>
+            
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>14.0.1</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>3.0.1</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			<!-- Slice  -->
+			<dependency>
+				<groupId>com.cognifide.slice</groupId>
+				<artifactId>slice-core-api</artifactId>
+				<version>${slice.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.cognifide.slice</groupId>
+				<artifactId>slice-core</artifactId>
+				<version>${slice.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.cognifide.slice</groupId>
+				<artifactId>slice-mapper</artifactId>
+				<version>${slice.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.cognifide.slice</groupId>
+				<artifactId>slice-mapper-api</artifactId>
+				<version>${slice.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<!-- <dependency>
+				<groupId>com.cognifide.slice</groupId>
+				<artifactId>slice-validation-api</artifactId>
+				<version>${slice.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.cognifide.slice</groupId>
+				<artifactId>slice-validation</artifactId>
+				<version>${slice.version}</version>
+				<scope>provided</scope>
+			</dependency>  -->
+			
+			<dependency>
+				<groupId>com.cognifide.slice-addon</groupId>
+				<artifactId>slice-cq56</artifactId>		
+				<version>${slice.addon.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<!-- <dependency>
+				<groupId>com.cognifide.slice-addon</groupId>
+				<artifactId>slice-cq56-taglib</artifactId>
+				<version>${slice.addon.version}</version>
+				<scope>provided</scope>
+			</dependency> -->
+			
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>jsp-api</artifactId>
+				<version>2.0</version>
+				<scope>provided</scope>
+			</dependency>
+		
+			<!-- OSGi dependencies -->
+			<dependency>
+				<groupId>org.osgi</groupId>
+				<artifactId>org.osgi.core</artifactId>
+				<version>4.2.0</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.osgi</groupId>
+				<artifactId>org.osgi.compendium</artifactId>
+				<version>4.2.0</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>org.apache.felix.scr.annotations</artifactId>
+				<version>1.9.8</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.sun.jersey</groupId>
+				<artifactId>jersey-client</artifactId>
+				<version>1.17</version>
+				<scope>provided</scope>
+			</dependency>
+	
+			<dependency>
+				<groupId>com.sun.jersey</groupId>
+				<artifactId>jersey-core</artifactId>
+				<version>1.17</version>
+				<scope>provided</scope>
+			</dependency>
+	
+			<dependency>
+				<groupId>com.fasterxml.jackson.jaxrs</groupId>
+				<artifactId>jackson-jaxrs-json-provider</artifactId>
+				<version>2.1.1</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>2.1.1</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-annotations</artifactId>
+				<version>2.1.1</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>2.1.1</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			<!-- Utility dependencies -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.6.4</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>1.6.1</version>
+				<scope>provided</scope>				
+			</dependency>
+			<dependency>
+				<groupId>commons-beanutils</groupId>
+				<artifactId>commons-beanutils</artifactId>
+				<version>1.8.3</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>2.5</version>
+				<scope>provided</scope>
+			</dependency>
+			<!-- Java APIs -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>2.5</version>
+				<scope>provided</scope>
+			</dependency>
+			<!-- CQ, Sling, JCR dependencies -->
+			<dependency>
+				<groupId>com.day.cq.wcm</groupId>
+				<artifactId>cq-wcm-api</artifactId>
+				<version>5.5.0</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+			<groupId>com.day.cq</groupId>
+				<artifactId>cq-security-api</artifactId>
+				<version>5.5.0</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.day.cq</groupId>
+				<artifactId>cq-security</artifactId>
+				<version>5.5.0</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+			    <groupId>com.day.cq</groupId>
+			    <artifactId>cq-replication</artifactId>
+			    <version>5.4.0</version>
+			    <scope>provided</scope>		    
+			</dependency>			 
+			<dependency>
+				<groupId>com.day.cq</groupId>
+				<artifactId>cq-mailer</artifactId>
+				<version>5.5.0</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.day.cq</groupId>
+				<artifactId>cq-commons</artifactId>
+				<version>5.5.0</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.sling</groupId>
+				<artifactId>org.apache.sling.api</artifactId>
+				<version>2.2.4</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+	            <groupId>org.apache.sling</groupId>
+	            <artifactId>org.apache.sling.jcr.api</artifactId>
+	            <version>2.1.0</version>
+	            <scope>provided</scope>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.apache.sling</groupId>
+	            <artifactId>org.apache.sling.jcr.jcr-wrapper</artifactId>
+	            <version>2.0.0</version>
+	            <scope>provided</scope>
+	        </dependency>
+	        <dependency>
+				<!-- replaces javax.servlet:jsp-api:2.0 -->
+				<groupId>org.apache.sling</groupId>
+				<artifactId>org.apache.sling.scripting.jsp</artifactId>
+				<version>2.0.20</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.sling</groupId>
+				<artifactId>org.apache.sling.scripting.jsp.taglib</artifactId>
+				<version>2.1.6</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.sling</groupId>
+				<artifactId>org.apache.sling.scripting.core</artifactId>
+				<version>2.0.24</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.commons.json</artifactId>
+                <version>2.0.6</version>
+                <scope>provided</scope>
+            </dependency>
+			<dependency>
+				<groupId>com.day.cq</groupId>
+				<artifactId>cq-search</artifactId>
+				<version>5.4.6</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.day.cq</groupId>
+				<artifactId>cq-i18n</artifactId>
+				<version>5.4.2</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+                <groupId>com.day.cq.wcm</groupId>
+                <artifactId>cq-wcm-foundation</artifactId>
+                <version>5.5.2</version>
+                <scope>provided</scope>
+            </dependency>  
+            <dependency>
+                <groupId>org.json</groupId>
+                <artifactId>json</artifactId>
+                <version>20080701</version>
+                <scope>provided</scope>
+            </dependency>
+			
+			<!-- JUnit dependencies -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.8.2</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>	
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>com.day.jcr.vault</groupId>
+					<artifactId>content-package-maven-plugin</artifactId>
+					<version>0.0.20</version>
+				</plugin>				
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.6</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.felix</groupId>
+					<artifactId>maven-bundle-plugin</artifactId>
+					<version>2.3.7</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+		</profile>
+	</profiles>
+
+</project>
